@@ -1,16 +1,15 @@
 <?php
 $dato=$_FILES['document']['name'];
-echo $gato;
-if((strncasecmp($dato, "factura", 7) === 0)){
-     echo "Es una factura";
+echo $dato;
+if((strncasecmp($dato, "factura", 7) === 0) || (strncasecmp($dato, "Factura", 7) === 0) || (strncasecmp($dato, "FACTURA", 7) === 0)){
+    move_uploaded_file($_FILES['document']['tmp_name'], "factura");
   }else if((strncasecmp($dato, "cedula", 6) === 0)) {
     echo "Es una cedula";
      }else if ((strncasecmp($dato, "recibo", 6) === 0)) {
         echo "Es una reciba";
      }else if ((strncasecmp($dato, "diferente", 6) === 0)) {
         echo "Es un archivo diferente";
-     }
-}
+     };
 
 
 
