@@ -1,26 +1,44 @@
+
 <?php
-$dato=$_FILES['document']['name'];
-if((strncasecmp($dato, "factura", 7) === 0) || (strncasecmp($dato, "Factura", 7) === 0) || (strncasecmp($dato, "FACTURA", 7) === 0)){
-    move_uploaded_file([$dato] ['tmp_name'], "factura");
-  }else if((strncasecmp($dato, "cedula", 6) === 0)) {
-    echo "Es una cedula";
-     }else if ((strncasecmp($dato, "recibo", 6) === 0)) {
-        echo "Es una reciba";
-     }else if ((strncasecmp($dato, "diferente", 6) === 0)) {
-        echo "Es un archivo diferente";
-     };
 
+/* $dir_subida=$_FILES['document']['name'];
 
+if((strncasecmp($dir_subida, "factura", 7) === 0)) {
+$dir_subida = 'facturas/'.$_FILES['document']['name'];
+move_uploaded_file($_FILES['document']['tmp_name'], $dir_subida);
 
-
-
-/* $directorio = 'cedulas/';
-$subir_archivo = $directorio.basename($_FILES['document']['name']);
-echo "<div>";
-if (move_uploaded_file($_FILES['subir_archivo']['tmp_name'], $subir_archivo)) {
-      echo "El archivo es válido y se cargó correctamente.<br><br>";
-	   echo"<a href='".$subir_archivo."' target='_blank'><img src='".$subir_archivo."' width='150'></a>";
-    } else {
-       echo "El documento no ha sido guardado.";
+    }else if ((strncasecmp($dir_subida, "orden", 6) === 0)) {
+      $dir_subida = 'orden_remision/'.$_FILES['document']['name'];
+      move_uploaded_file($_FILES['document']['tmp_name'], $dir_subida);  
     }; */
+    $formato=array('.pdf');
+    $nombre=$_FILES['document']['name'];
+    $tipo=$_FILES['document']['tmp_name'];
+    $exten=substr($nombre, strrpos($nombre, '.'));
+
+    if (in_array($exten, $formato) && (strncasecmp($nombre, "factura", 7) === 0) || (strncasecmp($nombre, "Factura", 7) === 0) || (strncasecmp($nombre, "FACTURA", 7) === 0)) {
+        if (move_uploaded_file($tipo,"facturas/$nombre")) {
+            echo "Archivo subido";
+        }else{
+            echo "Error!!!";
+        }
+    }else if (in_array($exten, $formato) && (strncasecmp($nombre, "orden", 5) === 0) || (strncasecmp($nombre, "Orden", 5) === 0) ||    (strncasecmp($nombre, "ORDEN", 5) === 0)) {
+      if (move_uploaded_file($tipo,"orden_pedido/$nombre")) {
+          echo "Archivo subido";
+      }else{
+          echo "Error!!!";
+      }
+    }else if(in_array($exten, $formato) && (strncasecmp($nombre, "epi", 3) === 0) || (strncasecmp($nombre, "Epi", 3) === 0) || (strncasecmp($nombre, "EPI", 3) === 0)) {
+      if (move_uploaded_file($tipo,"epi_crisis/$nombre")) {
+          echo "Archivo subido";
+      }else{
+          echo "Error!!!";
+      }
+    }else if(in_array($exten, $formato) && (strncasecmp($nombre, "credito", 7) === 0) || (strncasecmp($nombre, "Credito", 7) === 0) || (strncasecmp($nombre, "CREDITO", 7) === 0)) {
+      if (move_uploaded_file($tipo,"factura_credito/$nombre")) {
+          echo "Archivo subido";
+      }else{
+          echo "Error!!!";
+      }
+   }
 ?>

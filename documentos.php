@@ -1,7 +1,4 @@
-<!-- Se incluye la cadena de conexion para iniciar la insercion de datos en la base de datos. -->
-<?php
-include 'conec.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
