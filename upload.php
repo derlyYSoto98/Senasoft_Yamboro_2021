@@ -18,27 +18,80 @@ move_uploaded_file($_FILES['document']['tmp_name'], $dir_subida);
 
     if (in_array($exten, $formato) && (strncasecmp($nombre, "factura", 7) === 0) || (strncasecmp($nombre, "Factura", 7) === 0) || (strncasecmp($nombre, "FACTURA", 7) === 0)) {
         if (move_uploaded_file($tipo,"facturas/$nombre")) {
-            echo "Archivo subido";
+            ?>
+            <script laguage="javascript">window.alert('La factura se guardo con exito en el sistema!!');
+            window.location='documentos.php';
+           </script>
+            <?php
         }else{
             echo "Error!!!";
         }
-    }else if (in_array($exten, $formato) && (strncasecmp($nombre, "orden", 5) === 0) || (strncasecmp($nombre, "Orden", 5) === 0) ||    (strncasecmp($nombre, "ORDEN", 5) === 0)) {
+    }else if (in_array($exten, $formato) && (strncasecmp($nombre, "orden_pedido", 12) === 0) || (strncasecmp($nombre, "Orden
+    _pedido", 12) === 0) ||    (strncasecmp($nombre, "ORDEN_PEDIDO", 12) === 0)) {
       if (move_uploaded_file($tipo,"orden_pedido/$nombre")) {
-          echo "Archivo subido";
+        ?>
+        <script laguage="javascript">window.alert('La orden de pedido se guardo con exito en el sistema!!');
+        window.location='documentos.php';
+       </script>
+        <?php
       }else{
           echo "Error!!!";
       }
     }else if(in_array($exten, $formato) && (strncasecmp($nombre, "epi", 3) === 0) || (strncasecmp($nombre, "Epi", 3) === 0) || (strncasecmp($nombre, "EPI", 3) === 0)) {
       if (move_uploaded_file($tipo,"epi_crisis/$nombre")) {
-          echo "Archivo subido";
+        ?>
+        <script laguage="javascript">window.alert('El Epi Crisis se guardo con exito en el sistema!!');
+        window.location='documentos.php';
+       </script>
+        <?php
       }else{
           echo "Error!!!";
       }
-    }else if(in_array($exten, $formato) && (strncasecmp($nombre, "credito", 7) === 0) || (strncasecmp($nombre, "Credito", 7) === 0) || (strncasecmp($nombre, "CREDITO", 7) === 0)) {
+    }else if(in_array($exten, $formato) && (strncasecmp($nombre, "credito_factura", 15) === 0) || (strncasecmp($nombre, "Credito_Factura", 15) === 0) || (strncasecmp($nombre, "CREDITO_FACTURA", 15) === 0) || (strncasecmp($nombre, "Credito_factura", 15) === 0)) {
       if (move_uploaded_file($tipo,"factura_credito/$nombre")) {
-          echo "Archivo subido";
+        ?>
+        <script laguage="javascript">window.alert('La factura de credito se guardo con exito en el sistema!!');
+        window.location='documentos.php';
+       </script>
+        <?php
       }else{
           echo "Error!!!";
       }
-   }
+   }else if(in_array($exten, $formato) && (strncasecmp($nombre, "debito_factura", 14) === 0) || (strncasecmp($nombre, "Debito_Factura", 14) === 0) || (strncasecmp($nombre, "DEBITO_FACTURA", 14) === 0) || (strncasecmp($nombre, "Debito_factura", 14) === 0)) {
+    if (move_uploaded_file($tipo,"factura_debito/$nombre")) {
+        ?>
+        <script laguage="javascript">window.alert('La factura debito se guardo con exito en el sistema!!');
+        window.location='documentos.php';
+       </script>
+        <?php
+    }else{
+        echo "Error!!!";
+    }
+  }else if(in_array($exten, $formato) && (strncasecmp($nombre, "historia", 8) === 0) || (strncasecmp($nombre, "Historia", 8) === 0) || (strncasecmp($nombre, "HISTORIA", 8) === 0)) {
+    if (move_uploaded_file($tipo,"historias_clinicas/$nombre")) {
+        ?>
+            <script laguage="javascript">window.alert('La historia clinica se guardo con exito en el sistema!!');
+            window.location='documentos.php';
+           </script>
+            <?php
+    }else{
+        echo "Error!!!";
+    }
+  }else if(in_array($exten, $formato) && (strncasecmp($nombre, "orden_remision", 14) === 0) || (strncasecmp($nombre, "Orden_Remision", 14) === 0) || (strncasecmp($nombre, "ORDEN_REMISION", 14) === 0)) {
+    if (move_uploaded_file($tipo,"orden_remision/$nombre")) {
+        ?>
+            <script laguage="javascript">window.alert('La orden de remision se guardo con exito en el sistema!!');
+            window.location='documentos.php';
+           </script>
+            <?php
+    }else{
+        echo "Error!!!";
+    }
+  }else{
+        ?>
+            <script laguage="javascript">window.alert('El archivo adjunto no concuerda con los parametros establecidos!!');
+            window.location='documentos.php';
+           </script>
+            <?php 
+    }
 ?>
