@@ -15,7 +15,7 @@
             }
             $verificar = $resultado -> rowCount();	// retorna un numero diferente a 0 si el numero es mayor se ejecuta la sentecia $sql y se guarda en la variable $verificar
             if ($verificar > 0) {	// se ejecuta la  variable y si es mayor a 0 se erdirecciona a perfil o index principal 
-                header("location:perfil_invitado.php");
+                header("location:documentos.php");
             }else{	// si la variable $verificar es 0 entonces no lo deja ingresar 
                 ?>
                 <script leguage="javascript">window.alert("Los datos del usuario son erroneos !!")</script> <!-- si los datos de la base de datos no concuerdad arroja otro mensaje emergente que los datos no concuerdan -->
@@ -29,25 +29,25 @@
 <html>
 <head>
 	<title>inicio</title>
+    <link rel="stylesheet" href="../icons/all.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	<form method="POST"> 
-		<table>
-			<tr>
-				<td colspan="2">Invitado</td>
-			</tr>
-			<tr>
-				<td>Identificacion</td>
-				<td><input type="text" name="cedula" placeholder="Ingrese su Identificacion"></td>
-			</tr>
-			<tr>
-				<td>Contraseña</td>
-				<td><input type="password" name="passwor"placeholder="Ingrese su contraseña"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" name="ingresar" value="Ingresar"></td>
-			</tr>
-		</table>
-	</form>
+<div class="main-content">
+        <form class="login-content" action="" method="POST">
+            <h2>Iniciar Sesión</h2>
+            <i class="fas fa-user-circle"></i>
+            <div class="input-name">
+                <i class="fas fa-user"></i>
+                <input type="text" name="cedula" placeholder="Ingrese su Identificacion">
+            </div>
+            <div class="input-pass">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="passwor"placeholder="Ingrese su contraseña">
+            </div>
+            <!-- <button><script language="javascript">window.alert('comuniquese con el administrador');</script>Olvidaste contraseña ?</button> -->
+            <input type="submit" name="ingresar" value="Ingresar">
+        </form>
+    </div>
 </body>
 </html>

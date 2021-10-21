@@ -5,5 +5,5 @@
 
 <script>
 	
-	window.location="inicio.php";
+	window.location="../index.html";
 </script>

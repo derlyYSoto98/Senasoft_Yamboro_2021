@@ -4,7 +4,7 @@
     if (isset($_POST['ingresar'])) { 	// si se da click en el imput ingresar hagase lo siguiente
         if (empty($_POST['cedula']) || empty($_POST['passwor'])) {	// preguntamos que si los campos de texto y password estan vacios 
             ?>
-                <script leguage="javascript">window.alert('campos de texto y contraseña son obligatorios')</script> <!-- si las cajas estan vacias le arroja una alerta que estan los campos vacios -->
+                <script leguage="javascript">window.alert('campos de texto son obligatorios')</script> <!-- si las cajas estan vacias le arroja una alerta que estan los campos vacios -->
             <?php
         }else{	//y la negacion seria que sino estan vacias la cajas de ingreso al administrador
             $sql="SELECT * FROM administrador WHERE cedula_admi=:cedula AND contra_admi=:passwor";	// valla a la base de datos y busque la cedula y contraseña 
@@ -28,26 +28,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>inicio</title>
+<title>inicio</title>
+    <link rel="stylesheet" href="../icons/all.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	<form method="POST"> 
-		<table>
-			<tr>
-				<td colspan="2">Administrador</td>
-			</tr>
-			<tr>
-				<td>Identificacion</td>
-				<td><input type="text" name="cedula" placeholder="Ingrese su Identificacion"></td>
-			</tr>
-			<tr>
-				<td>Contraseña</td>
-				<td><input type="password" name="passwor"placeholder="Ingrese su contraseña"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" name="ingresar" value="Ingresar"></td>
-			</tr>
-		</table>
-	</form>
+<div class="main-content">
+        <form class="login-content" action="" method="POST">
+            <h2>Iniciar Sesión</h2>
+            <i class="fas fa-user-circle"></i>
+            <div class="input-name">
+                <i class="fas fa-user"></i>
+                <input type="text" name="cedula" placeholder="Ingrese su Identificacion">
+            </div>
+            <div class="input-pass">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="passwor"placeholder="Ingrese su contraseña">
+            </div>
+            <!-- <button><script language="javascript">window.alert('comuniquese con el administrador');</script>Olvidaste contraseña ?</button> -->
+            <input type="submit" name="ingresar" value="Ingresar">
+        </form>
+    </div>
 </body>
 </html>

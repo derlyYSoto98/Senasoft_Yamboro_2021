@@ -14,17 +14,22 @@
                 echo "usuario : $nombre";
             }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registro usuario</title>
+    <title>Guardar Documentos</title>
 </head>
 <body>
-    <a href="cerrar_sesion.php">cerrar secion</a>
-    <!-- Hola mundo  -->
+<form action="upload.php" method="POST" enctype="multipart/form-data" name="form1">       
+     <h2>SUBIR ARCHIVOS</h2>   
+     <tr> 
+        <td><input type="file" name="document"></td>   <br><br>
+        <td><input type="submit" name="btn1" value="Guardar archivo"></td> 
+     </tr>   
+</form>
+<a href="cerrar_sesion.php">cerrar secion</a>
 </body>
 </html>
