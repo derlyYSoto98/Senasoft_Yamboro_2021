@@ -168,7 +168,6 @@ body{
     grid-template-columns: 3fr 2fr;
     gap: 20px;
     align-items: center;
-
 }
 .footer__title{
     font-weight: 400;

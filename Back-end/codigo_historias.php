@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,3 +22,9 @@ obtener_estructura_directorios("historias_clinicas");
 </div>
 </body>
 </html>
+=======
+<?php
+include("funcion.php");
+
+obtener_estructura_directorios("historias_clinicas");
+>>>>>>> 4dc2759b53d0ce2d3a433c57a766e62eb1ef75d5
