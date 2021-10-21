@@ -31,6 +31,14 @@ body{
 .hero .container{
     padding: 0;
 }
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
 .nav--footer{
     font-weight: 300;
     justify-content: flex-start;
@@ -81,7 +89,6 @@ body{
     width: 100%;
     height: 100px;
 }
-
 
 
 .projects{
@@ -143,6 +150,8 @@ body{
 
 
 
+
+
 .footer{
     background: var(--color-primary);
 }
@@ -183,23 +192,14 @@ body{
 
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 960px){
     :root {
         --boton-padding: 18px 40px;
     }
-    .nav{
-        justify-content: space-around;
-    }
-    .nav__items--cta{
-        border: none;
-    }
+    
     .nav__items{
-        font-weight: 400;
-        border-bottom: 1px solid #fff;
+        font-weight: 300;
         margin-right: 0;
-    }
-    .nav__items--footer{
-        border: none;
     }
     .hero__texts{
         width: 100%;
@@ -211,27 +211,12 @@ body{
     .hero__subtitle{
         font-size: 1.5rem;
     }
-    /*abaut*/
-    .presentation__copy{
-        width: 100%;
-    }
-    .about{
-        grid-template-columns: 1fr;
-    }
-    .about.container{
-        padding-top: 30px;
-    }
-    .about__img--left{
-        text-align: center;
-    }
-    .about__texts:last-child{
-        grid-row: 3/4;
-    }
     /*projects*/
     .projects__grid{
         grid-template-areas: 
-        "img1 img1 img2 img2";
+        "img1 img2";
     }
+    
     /*footer*/
     .footer__grid{
         grid-template-columns: 1fr;
@@ -241,7 +226,7 @@ body{
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 800px){
     :root {
         --boton-padding: 18px 35px;
     }
@@ -265,14 +250,16 @@ body{
     .hero__title{
         font-size: 2rem;
     }
+    
     /*projects*/
     .projects__grid{
         grid-template-areas: 
         "img1"
         "img2";
         height: auto;
-        grid-template-rows: repeat(5, 250px);
+        grid-template-rows: repeat(1, 250px);
         grid-auto-rows: 250px;
         gap: 10px;
     }
+    
 }
