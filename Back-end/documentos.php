@@ -1,3 +1,4 @@
+<!-- Se incluye la cadena de conexion y la session para la funcionalidad -->
 <?php  
     include_once ('conec.php');
         session_start();
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="../css/subir_document.css">
 </head>
 <body>
+    <!-- Si se decea se aplica una session para determinar la accesibilidad a la pagina -->
     <div>
         <?php
             if (isset($_SESSION['nombre'])) {
@@ -30,7 +32,11 @@
         ?>
         
     </div>
+<<<<<<< HEAD
     <a href="cerrar_sesion.php">cerrar sesión</a>
+=======
+   <!--  Se crea en formulario basico con la accion de enviar los datos al archivo upload para determinar su ubicacion -->
+>>>>>>> 00ae350e1e6eb023ff8a9eb1cfb92f26651b6d84
 <form action="upload.php" method="POST" enctype="multipart/form-data" name="form1">  
     <fieldset>
      <legend>SUBIR ARCHIVOS</legend> 

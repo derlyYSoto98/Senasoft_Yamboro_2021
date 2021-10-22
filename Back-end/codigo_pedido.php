@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,7 @@
     <h1>Orden de Pedido</h1>
     <a href="../index.html">volver</a>
     <div>
+<!-- Se incluye la funcion que determna que se muestren los archivos cargados -->
 <?php
 include("funcion.php");
 ?>
@@ -23,9 +23,3 @@ obtener_estructura_directorios("orden_pedido");
 
 </body>
 </html>
-=======
-<?php
-include("funcion.php");
-
-obtener_estructura_directorios("orden_pedido");
->>>>>>> 4dc2759b53d0ce2d3a433c57a766e62eb1ef75d5
