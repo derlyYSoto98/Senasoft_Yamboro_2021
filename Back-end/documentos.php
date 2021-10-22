@@ -32,17 +32,21 @@
         ?>
         
     </div>
+<<<<<<< HEAD
+    <a href="cerrar_sesion.php">cerrar sesión</a>
+=======
    <!--  Se crea en formulario basico con la accion de enviar los datos al archivo upload para determinar su ubicacion -->
+>>>>>>> 00ae350e1e6eb023ff8a9eb1cfb92f26651b6d84
 <form action="upload.php" method="POST" enctype="multipart/form-data" name="form1">  
     <fieldset>
      <legend>SUBIR ARCHIVOS</legend> 
-     <h1>Seleccione el archivo para determinar su ubicación correspondiente</h1>  <br>
+     <h1> Seleccione el archivo para determinar su ubicación correspondiente</h1>  <br>
      <tr> 
         <td><input type="file" name="document"></td>   <br><br>
         <td><input type="submit" name="btn1" value="Guardar archivo"></td> 
      </tr>  
     </fieldset>
 </form>
-<a href="cerrar_sesion.php">cerrar sesión</a>
+
 </body>
 </html>
