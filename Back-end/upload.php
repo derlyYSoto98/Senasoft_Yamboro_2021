@@ -27,9 +27,9 @@
           echo "Error!!!";
       }
     }else if(in_array($exten, $formato) && (strncasecmp($nombre, "epi", 3) === 0) || (strncasecmp($nombre, "Epi", 3) === 0) || (strncasecmp($nombre, "EPI", 3) === 0)) {
-      if (move_uploaded_file($tipo,"epi_crisis/$nombre")) {
+      if (move_uploaded_file($tipo,"epicrisis/$nombre")) {
         ?>
-        <script laguage="javascript">window.alert('El Epi Crisis se guardo con exito en el sistema!!');
+        <script laguage="javascript">window.alert('La Epicrisis se guardo con exito en el sistema!!');
         window.location='documentos.php';
        </script>
         <?php
