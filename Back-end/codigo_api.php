@@ -17,7 +17,7 @@ include("funcion.php");
 ?>
             Facturas alojadas en el repositorio local "Epicrisis"
         <?php
-obtener_estructura_directorios("epi_crisis");
+obtener_estructura_directorios("epicrisis");
 ?>
 </div>
 
