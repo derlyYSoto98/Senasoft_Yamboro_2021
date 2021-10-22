@@ -5,7 +5,7 @@
 - Al momento de guardar los archivos deben dirigirse a carpetas separas dependiendo del tipo de documento(facturas,cuentas, Historias Clinicas, etc  ).
 - El aplicativo no debe permitir el acceso a personal no autorizado.
 
-# Empresa
+# Empresa Trasfiriendo 
 
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg)
 
