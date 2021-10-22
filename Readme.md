@@ -35,6 +35,7 @@ Segun el requerimiento inicial se solicitaba el uso de Inteligencia Artificial p
 - En la interfas grafica: CSS
 - En lenguaje de programacion: PHP y JAVASCRIPT.
 - Creacion de la base de datos: MYSQL.
+- Servidor local: XAMPP.
 
 ### Problemas en la ejecucion   📌
 Durante el desarrollo de la actividad los problemas que se presentaron fueron leves pues se mantuvo una comunicacion constante y cuando un codigo no funcionaba nos apoyamos como equipo.
