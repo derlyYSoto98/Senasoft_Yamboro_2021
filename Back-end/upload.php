@@ -1,30 +1,20 @@
 <?php
 
-/* $dir_subida=$_FILES['document']['name'];
-
-if((strncasecmp($dir_subida, "factura", 7) === 0)) {
-$dir_subida = 'facturas/'.$_FILES['document']['name'];
-move_uploaded_file($_FILES['document']['tmp_name'], $dir_subida);
-
-    }else if ((strncasecmp($dir_subida, "orden", 6) === 0)) {
-      $dir_subida = 'orden_remision/'.$_FILES['document']['name'];
-      move_uploaded_file($_FILES['document']['tmp_name'], $dir_subida);  
-    }; */
-    $formato=array('.pdf');
-    $nombre=$_FILES['document']['name'];
+    $formato=array('.pdf'); /* Se establece que solo sean en formato pdf */
+    $nombre=$_FILES['document']['name'];/* Se reciben los datos de la caja de texto del file */
     $tipo=$_FILES['document']['tmp_name'];
     $exten=substr($nombre, strrpos($nombre, '.'));
-
+ /* Se generan las condiciones para determinar la ubicacion de cada archivo mediante diversas condiciones*/
     if (in_array($exten, $formato) && (strncasecmp($nombre, "factura", 7) === 0) || (strncasecmp($nombre, "Factura", 7) === 0) || (strncasecmp($nombre, "FACTURA", 7) === 0)) {
-        if (move_uploaded_file($tipo,"facturas/$nombre")) {
+        if (move_uploaded_file($tipo,"facturas/$nombre")) /* Se le asigna la ubicacion */ {
             ?>
             <script laguage="javascript">window.alert('La factura se guardo con exito en el sistema!!');
-            window.location='documentos.php';
+            window.location='documentos.php'; /* Confirmacion de la oprecion exitosa */
            </script>
             <?php
         }else{
             echo "Error!!!";
-        }
+        } /* Negacion de lo anterior */
     }else if (in_array($exten, $formato) && (strncasecmp($nombre, "orden_pedido", 12) === 0) || (strncasecmp($nombre, "Orden
     _pedido", 12) === 0) ||    (strncasecmp($nombre, "ORDEN_PEDIDO", 12) === 0)) {
       if (move_uploaded_file($tipo,"orden_pedido/$nombre")) {
