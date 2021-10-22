@@ -42,7 +42,7 @@ Durante el desarrollo de la actividad los problemas que se presentaron fueron le
 
 
 ### Enlace directo al repositorio
-[Link](https://pandao.github.io/editor.md/en.html#Senasoft_2021 "Link")
+[Link](https://derlyysoto98.github.io/Senasoft_Yamboro_2021/ "Link")
 
 ##### Colaboradores      ⚙️
 Derly Yisela Soto Melo.
