@@ -1,11 +1,37 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    margin-left: 90%;
+    margin-top: 100px;
+    list-style: none;
+    font-size: 1.2em;
+    color: black;
+    border-radius: 2px ;
+    width: 12px;
+    padding: 10px;
+    cursor: pointer;
+    /* border-bottom: 1px solid black; */
+}
+a:hover{
+    /* background-color: grey; */
+    color: grey;
+}
+div{
+    font-size: 1.3em;
+    padding: 15px;
+    text-align: right;
+    background: rgb(1,139,211,.9);
+    color: white;
+}
 form{
     text-align: center;
-    width: 54%;
+    width: 48%;
     height: 70%;
     margin: 0 auto;
-    padding-top: 110px;
-
+    padding-top: 190px;
+    
 }
 fieldset{
     border-radius: 7px;
@@ -22,41 +48,24 @@ h1{
 }
 input[type="file"]{
     color: rgb(0, 0, 0);
-    width: 66%;
+    width: 53%;
     height: 9%;
     font-size: 18px;
 }
 
 input[type="submit"]{
-    background: rgb(2, 179, 10);
+    background: rgb(1,139,211);
     border: white;
     color: white;
     width: 90%;
     height: 9%;
+    padding: 9px;
     font-size: 20px;
     border-radius: 3px;
     cursor: pointer;
 
 }
 input[type="submit"]:hover{
-    background: rgb(10, 88, 0);
+    background: rgb(2, 58, 88);
     color: rgb(228, 227, 227);
-}
-a{
-    margin-left: 90%;
-    margin-top: 100px;
-    /* text-decoration: none; */
-    list-style: none;
-    /* background-color: gray; */
-    font-size: 1.2em;
-    color: black;
-    border-radius: 2px ;
-    width: 12px;
-    padding: 10px;
-    cursor: pointer;
-    /* border-bottom: 1px solid black; */
-}
-a:hover{
-    /* background-color: grey; */
-    color: grey;
 }

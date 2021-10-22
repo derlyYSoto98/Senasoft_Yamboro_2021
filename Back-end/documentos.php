@@ -30,16 +30,17 @@
         ?>
         
     </div>
+    <a href="cerrar_sesion.php">cerrar sesión</a>
 <form action="upload.php" method="POST" enctype="multipart/form-data" name="form1">  
     <fieldset>
      <legend>SUBIR ARCHIVOS</legend> 
-     <h1>Seleccione el archivo para determinar su ubicación correspondiente</h1>  <br>
+     <h1> Seleccione el archivo para determinar su ubicación correspondiente</h1>  <br>
      <tr> 
         <td><input type="file" name="document"></td>   <br><br>
         <td><input type="submit" name="btn1" value="Guardar archivo"></td> 
      </tr>  
     </fieldset>
 </form>
-<a href="cerrar_sesion.php">cerrar sesión</a>
+
 </body>
 </html>
