@@ -86,7 +86,7 @@ div{
     color: white;
 
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) and (min-width:500px){
     table{
         margin-left: -10px; 
         width: 30%;
@@ -94,6 +94,7 @@ div{
     }
     .boton{
         margin-left: 10px;
+        width: 75px;
 
     }
     h1{
@@ -106,6 +107,7 @@ div{
         font-size: 1.1em;
     }
     a{
-        margin-right: 40%;
+        margin-left:60%;
     }
 }
+

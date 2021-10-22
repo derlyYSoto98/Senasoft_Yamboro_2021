@@ -32,11 +32,7 @@
         ?>
         
     </div>
-<<<<<<< HEAD
     <a href="cerrar_sesion.php">cerrar sesión</a>
-=======
-   <!--  Se crea en formulario basico con la accion de enviar los datos al archivo upload para determinar su ubicacion -->
->>>>>>> 00ae350e1e6eb023ff8a9eb1cfb92f26651b6d84
 <form action="upload.php" method="POST" enctype="multipart/form-data" name="form1">  
     <fieldset>
      <legend>SUBIR ARCHIVOS</legend> 

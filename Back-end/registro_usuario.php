@@ -27,7 +27,7 @@ include 'conec.php';
                 <td><input type="text" name="txtc" id="txtc" placeholder="contraseña" require></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Guardar" name="btn1"> </td>
+                <td><input class="boton" type="submit" value="Guardar" name="btn1"> </td>
             </tr>
         </table>
     </form>
